@@ -23,6 +23,11 @@ pub use task::{TaskControlBlock, TaskStatus};
 
 pub use context::TaskContext;
 
+
+use crate::timer::get_time_ms;
+use crate::syscall::process::TaskInfo;
+use alloc::vec::Vec;
+
 /// The task manager, where all the tasks are managed.
 ///
 /// Functions implemented on `TaskManager` deals with all task state transitions
@@ -47,6 +52,11 @@ pub struct TaskManagerInner {
     current_task: usize,
 }
 
+
+pub fn mynew_syscall(id: usize){
+    TASK_MANAGER.mynew_syscall(id);
+}
+
 lazy_static! {
     /// Global variable: TASK_MANAGER
     pub static ref TASK_MANAGER: TaskManager = {
@@ -54,6 +64,9 @@ lazy_static! {
         let mut tasks = [TaskControlBlock {
             task_cx: TaskContext::zero_init(),
             task_status: TaskStatus::UnInit,
+            is_running: false,
+            syscall_num: [0; 500],
+            start_time: 0,
         }; MAX_APP_NUM];
         for (i, task) in tasks.iter_mut().enumerate() {
             task.task_cx = TaskContext::goto_restore(init_app_cx(i));
@@ -76,10 +89,43 @@ impl TaskManager {
     ///
     /// Generally, the first task in task list is an idle task (we call it zero process later).
     /// But in ch3, we load apps statically, so the first task is a real app.
+    pub fn mynew_syscall(&self, id: usize){
+        let mut myinner = self.inner.exclusive_access();
+        let current_task = myinner.current_task;
+
+        myinner.tasks[current_task].syscall_num[id] += 1;
+    }
+
+    fn current_task_info(&self) -> TaskInfo {
+        let myinner = self.inner.exclusive_access();
+
+        let current_task = myinner.current_task;
+
+        let syscall = myinner.tasks[current_task].syscall_num
+            .into_iter()
+            .map(|e| e as u32)
+            .collect::<Vec<u32>>()
+            .try_into()
+            .unwrap();
+
+        let status = TaskStatus::Running;
+        let time = get_time_ms() - myinner.tasks[current_task].start_time;
+
+        TaskInfo {
+            status,
+            time,
+            syscall_times: syscall,
+        }
+    }
+
     fn run_first_task(&self) -> ! {
         let mut inner = self.inner.exclusive_access();
         let task0 = &mut inner.tasks[0];
         task0.task_status = TaskStatus::Running;
+        if task0.is_running == false {
+            task0.start_time = get_time_ms();
+            task0.is_running = true;
+        }
         let next_task_cx_ptr = &task0.task_cx as *const TaskContext;
         drop(inner);
         let mut _unused = TaskContext::zero_init();
@@ -123,6 +169,13 @@ impl TaskManager {
             let current = inner.current_task;
             inner.tasks[next].task_status = TaskStatus::Running;
             inner.current_task = next;
+
+            let next_task = &mut inner.tasks[next];
+
+            if next_task.is_running == false {
+                next_task.start_time = get_time_ms();
+                next_task.is_running = true;
+            }
             let current_task_cx_ptr = &mut inner.tasks[current].task_cx as *mut TaskContext;
             let next_task_cx_ptr = &inner.tasks[next].task_cx as *const TaskContext;
             drop(inner);
@@ -168,4 +221,8 @@ pub fn suspend_current_and_run_next() {
 pub fn exit_current_and_run_next() {
     mark_current_exited();
     run_next_task();
+}
+
+pub fn current_task_info() -> TaskInfo{
+    TASK_MANAGER.current_task_info()
 }
