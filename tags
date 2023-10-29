@@ -1,0 +1,176 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(KERNEL_BIN)	os/Makefile	/^$(KERNEL_BIN): kernel$/;"	t	language:Make
+.bss	os/src/linker.ld	/^    .bss : {$/;"	S	language:LdScript
+.data	os/src/linker.ld	/^    .data : {$/;"	S	language:LdScript
+.rodata	os/src/linker.ld	/^    .rodata : {$/;"	S	language:LdScript
+.text	os/src/linker.ld	/^    .text : {$/;"	S	language:LdScript
+0	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	o	language:JSON	array:local
+0	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	s	language:JSON	array:rustflags
+0	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	a	language:JSON	array:deps
+0	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	n	language:JSON	array:deps.0
+0	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	o	language:JSON	array:local
+0	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	s	language:JSON	array:rustflags
+1	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	s	language:JSON	array:rustflags
+1	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	s	language:JSON	array:deps.0
+1	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	s	language:JSON	array:rustflags
+15729799797837862367	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	o	language:JSON	object:outputs
+15879463308771647555	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	o	language:JSON	object:outputs
+2	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	b	language:JSON	array:deps.0
+3	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	n	language:JSON	array:deps.0
+4614504638168534921	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	o	language:JSON	object:outputs
+BASE_ADDRESS	os/src/linker.ld	/^BASE_ADDRESS = 0x80200000;$/;"	s	language:LdScript
+BOARD	os/Makefile	/^BOARD := qemu$/;"	m	language:Make
+BOOTLOADER	os/Makefile	/^BOOTLOADER := ..\/bootloader\/$(SBI)-$(BOARD).bin$/;"	m	language:Make
+Binaries	dev-env-info.md	/^### Binaries$/;"	S	language:Markdown
+Build & Run	README.md	/^### Build & Run$/;"	S	language:Markdown
+CheckDepInfo	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	o	language:JSON	object:local.0
+CheckDepInfo	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	o	language:JSON	object:local.0
+Code	README.md	/^### Code$/;"	S	language:Markdown
+DISASM	os/Makefile	/^DISASM ?= -x$/;"	m	language:Make
+DISASM_TMP	os/Makefile	/^DISASM_TMP := target\/$(TARGET)\/$(MODE)\/asm$/;"	m	language:Make
+DOCKER_NAME	Makefile	/^DOCKER_NAME ?= rcore-tutorial-v3$/;"	m	language:Make
+Dependency	dev-env-info.md	/^## Dependency$/;"	s	language:Markdown
+Documents	README.md	/^### Documents$/;"	S	language:Markdown
+Grading	README.md	/^### Grading$/;"	S	language:Markdown
+KERNEL_BIN	os/Makefile	/^KERNEL_BIN := $(KERNEL_ELF).bin$/;"	m	language:Make
+KERNEL_ELF	os/Makefile	/^KERNEL_ELF := target\/$(TARGET)\/$(MODE)\/os$/;"	m	language:Make
+KERNEL_ENTRY_PA	os/Makefile	/^KERNEL_ENTRY_PA := 0x80200000$/;"	m	language:Make
+LOGGER	os/src/logging.rs	/^    static LOGGER: SimpleLogger = SimpleLogger;$/;"	v	language:Rust	function:init
+MODE	os/Makefile	/^MODE := release$/;"	m	language:Make
+MODE_ARG	os/Makefile	/^	MODE_ARG := --release$/;"	m	language:Make
+OBJCOPY	os/Makefile	/^OBJCOPY := rust-objcopy --binary-architecture=riscv64$/;"	m	language:Make
+OBJDUMP	os/Makefile	/^OBJDUMP := rust-objdump --arch-name=riscv64$/;"	m	language:Make
+OS API docs of rCore Tutorial Code 2023A	README.md	/^### OS API docs of rCore Tutorial Code 2023A$/;"	S	language:Markdown
+QEMUExit	os/src/boards/qemu.rs	/^pub trait QEMUExit {$/;"	i	language:Rust
+RISCV64	os/src/boards/qemu.rs	/^impl QEMUExit for RISCV64 {$/;"	c	language:Rust
+RISCV64	os/src/boards/qemu.rs	/^impl RISCV64 {$/;"	c	language:Rust
+RISCV64	os/src/boards/qemu.rs	/^pub struct RISCV64 {$/;"	s	language:Rust
+Related Resources	README.md	/^### Related Resources$/;"	S	language:Markdown
+SBI	os/Makefile	/^SBI ?= rustsbi$/;"	m	language:Make
+SimpleLogger	os/src/logging.rs	/^impl Log for SimpleLogger {$/;"	c	language:Rust
+SimpleLogger	os/src/logging.rs	/^struct SimpleLogger;$/;"	s	language:Rust
+Stdout	os/src/console.rs	/^impl Write for Stdout {$/;"	c	language:Rust
+Stdout	os/src/console.rs	/^struct Stdout;$/;"	s	language:Rust
+TARGET	os/Makefile	/^TARGET := riscv64gc-unknown-none-elf$/;"	m	language:Make
+_start	os/src/entry.asm	/^_start:$/;"	l	language:Asm
+addr	os/src/boards/qemu.rs	/^    addr: u64,$/;"	m	language:Rust	struct:RISCV64
+board	os/src/main.rs	/^mod board;$/;"	n	language:Rust
+boot_stack_lower_bound	os/src/entry.asm	/^boot_stack_lower_bound:$/;"	l	language:Asm
+boot_stack_lower_bound	os/src/main.rs	/^        fn boot_stack_lower_bound(); \/\/ stack lower bound$/;"	f	language:Rust	function:rust_main	signature:()
+boot_stack_top	os/src/entry.asm	/^boot_stack_top:/;"	l	language:Asm
+boot_stack_top	os/src/main.rs	/^        fn boot_stack_top(); \/\/ stack top$/;"	f	language:Rust	function:rust_main	signature:()
+build	os/Makefile	/^build: env $(KERNEL_BIN)$/;"	t	language:Make
+build_docker	Makefile	/^build_docker: $/;"	t	language:Make
+check&grade OS in ch$ID with more tests	README.md	/^# check&grade OS in ch$ID with more tests$/;"	c	language:Markdown
+clean	os/Makefile	/^clean:$/;"	t	language:Make
+clear_bss	os/src/main.rs	/^pub fn clear_bss() {$/;"	f	language:Rust	signature:()
+code	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	n	language:JSON	object:outputs.15729799797837862367
+code	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	n	language:JSON	object:outputs.15879463308771647555
+code	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	n	language:JSON	object:outputs.4614504638168534921
+compile_kind	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	n	language:JSON
+compile_kind	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	n	language:JSON
+config	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	n	language:JSON
+config	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	n	language:JSON
+console	os/src/main.rs	/^mod console;$/;"	n	language:Rust
+console_putchar	os/src/sbi.rs	/^pub fn console_putchar(c: usize) {$/;"	f	language:Rust	signature:(c: usize)
+debug	os/Makefile	/^debug: build$/;"	t	language:Make
+dep_info	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	s	language:JSON	object:local.0.CheckDepInfo
+dep_info	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	s	language:JSON	object:local.0.CheckDepInfo
+deps	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	a	language:JSON
+deps	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	a	language:JSON
+disasm	os/Makefile	/^disasm: kernel$/;"	t	language:Make
+disasm-vim	os/Makefile	/^disasm-vim: kernel$/;"	t	language:Make
+docker	Makefile	/^docker:$/;"	t	language:Make
+ebss	os/src/linker.ld	/^    ebss = .;$/;"	s	language:LdScript
+ebss	os/src/main.rs	/^        fn ebss(); \/\/ end addr of BSS segment$/;"	f	language:Rust	function:rust_main	signature:()
+ebss	os/src/main.rs	/^        fn ebss();$/;"	f	language:Rust	function:clear_bss	signature:()
+edata	os/src/linker.ld	/^    edata = .;$/;"	s	language:LdScript
+edata	os/src/main.rs	/^        fn edata(); \/\/ end addr of data segment$/;"	f	language:Rust	function:rust_main	signature:()
+ekernel	os/src/linker.ld	/^    ekernel = .;$/;"	s	language:LdScript
+enabled	os/src/logging.rs	/^    fn enabled(&self, _metadata: &Metadata) -> bool {$/;"	P	language:Rust	implementation:SimpleLogger	signature:(&self, _metadata: &Metadata) -> bool
+env	os/Makefile	/^env:$/;"	t	language:Make
+erodata	os/src/linker.ld	/^    erodata = .;$/;"	s	language:LdScript
+erodata	os/src/main.rs	/^        fn erodata(); \/\/ end addr of Read-Only data ssegment$/;"	f	language:Rust	function:rust_main	signature:()
+etext	os/src/linker.ld	/^    etext = .;$/;"	s	language:LdScript
+etext	os/src/main.rs	/^        fn etext(); \/\/ end addr of text segment$/;"	f	language:Rust	function:rust_main	signature:()
+exit	os/src/boards/qemu.rs	/^    fn exit(&self, code: u32) -> ! {$/;"	P	language:Rust	implementation:RISCV64	signature:(&self, code: u32) -> !
+exit	os/src/boards/qemu.rs	/^    fn exit(&self, code: u32) -> !;$/;"	P	language:Rust	interface:QEMUExit	signature:(&self, code: u32) -> !
+exit_code_encode	os/src/boards/qemu.rs	/^const fn exit_code_encode(code: u32) -> u32 {$/;"	f	language:Rust	signature:(code: u32) -> u32
+exit_failure	os/src/boards/qemu.rs	/^    fn exit_failure(&self) -> ! {$/;"	P	language:Rust	implementation:RISCV64	signature:(&self) -> !
+exit_failure	os/src/boards/qemu.rs	/^    fn exit_failure(&self) -> !;$/;"	P	language:Rust	interface:QEMUExit	signature:(&self) -> !
+exit_success	os/src/boards/qemu.rs	/^    fn exit_success(&self) -> ! {$/;"	P	language:Rust	implementation:RISCV64	signature:(&self) -> !
+exit_success	os/src/boards/qemu.rs	/^    fn exit_success(&self) -> !;$/;"	P	language:Rust	interface:QEMUExit	signature:(&self) -> !
+features	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	s	language:JSON
+features	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	s	language:JSON
+flush	os/src/logging.rs	/^    fn flush(&self) {}$/;"	P	language:Rust	implementation:SimpleLogger	signature:(&self)
+fmt	Makefile	/^fmt:$/;"	t	language:Make
+gdbclient	os/Makefile	/^gdbclient:$/;"	t	language:Make
+gdbserver	os/Makefile	/^gdbserver: build$/;"	t	language:Make
+init	os/src/logging.rs	/^pub fn init() {$/;"	f	language:Rust	signature:()
+kernel	os/Makefile	/^kernel:$/;"	t	language:Make
+lang_items	os/src/main.rs	/^mod lang_items;$/;"	n	language:Rust
+local	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	a	language:JSON
+local	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	a	language:JSON
+log	os/src/logging.rs	/^    fn log(&self, record: &Record) {$/;"	P	language:Rust	implementation:SimpleLogger	signature:(&self, record: &Record)
+logging	os/src/main.rs	/^mod logging;$/;"	n	language:Rust
+metadata	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	n	language:JSON
+metadata	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	n	language:JSON
+new	os/src/boards/qemu.rs	/^    pub const fn new(addr: u64) -> Self {$/;"	P	language:Rust	implementation:RISCV64	signature:(addr: u64) -> Self
+outputs	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	o	language:JSON
+panic	os/src/lang_items.rs	/^fn panic(info: &PanicInfo) -> ! {$/;"	f	language:Rust	signature:(info: &PanicInfo) -> !
+path	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	n	language:JSON
+path	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	n	language:JSON
+print	os/src/console.rs	/^macro_rules! print {$/;"	M	language:Rust
+print	os/src/console.rs	/^pub fn print(args: fmt::Arguments) {$/;"	f	language:Rust	signature:(args: fmt::Arguments)
+println	os/src/console.rs	/^macro_rules! println {$/;"	M	language:Rust
+profile	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	n	language:JSON
+profile	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	n	language:JSON
+rCore-Tutorial-Code-2023A	README.md	/^# rCore-Tutorial-Code-2023A$/;"	c	language:Markdown
+rCore-Tutorial-v3	dev-env-info.md	/^# rCore-Tutorial-v3$/;"	c	language:Markdown
+run	os/Makefile	/^run: run-inner$/;"	t	language:Make
+run OS in ch$ID	README.md	/^# run OS in ch$ID$/;"	c	language:Markdown
+run-inner	os/Makefile	/^run-inner: build$/;"	t	language:Make
+rust-analyzer.checkOnSave.allTargets	.vscode/settings.json	/^    "rust-analyzer.checkOnSave.allTargets": false,$/;"	b	language:JSON
+rust.all_targets	.vscode/settings.json	/^    "rust.all_targets": false,$/;"	b	language:JSON
+rust_main	os/src/main.rs	/^pub fn rust_main() -> ! {$/;"	f	language:Rust	signature:() -> !
+rustc	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	n	language:JSON
+rustc	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	n	language:JSON
+rustc_fingerprint	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	n	language:JSON
+rustflags	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	a	language:JSON
+rustflags	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	a	language:JSON
+sbi	os/src/main.rs	/^mod sbi;$/;"	n	language:Rust
+sbi_call	os/src/sbi.rs	/^fn sbi_call(which: usize, arg0: usize, arg1: usize, arg2: usize) -> usize {$/;"	f	language:Rust	signature:(which: usize, arg0: usize, arg1: usize, arg2: usize) -> usize
+sbss	os/src/linker.ld	/^        sbss = .;$/;"	s	language:LdScript	section:.bss
+sbss	os/src/main.rs	/^        fn sbss(); \/\/ start addr of BSS segment$/;"	f	language:Rust	function:rust_main	signature:()
+sbss	os/src/main.rs	/^        fn sbss();$/;"	f	language:Rust	function:clear_bss	signature:()
+sdata	os/src/linker.ld	/^    sdata = .;$/;"	s	language:LdScript
+sdata	os/src/main.rs	/^        fn sdata(); \/\/ start addr of data segment$/;"	f	language:Rust	function:rust_main	signature:()
+setup build&run environment first	README.md	/^# setup build&run environment first$/;"	c	language:Markdown
+shutdown	os/src/sbi.rs	/^pub fn shutdown() -> ! {$/;"	f	language:Rust	signature:() -> !
+skernel	os/src/linker.ld	/^    skernel = .;$/;"	s	language:LdScript
+srodata	os/src/linker.ld	/^    srodata = .;$/;"	s	language:LdScript
+srodata	os/src/main.rs	/^        fn srodata(); \/\/ start addr of Read-Only data segment$/;"	f	language:Rust	function:rust_main	signature:()
+status	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	s	language:JSON	object:outputs.15729799797837862367
+status	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	s	language:JSON	object:outputs.15879463308771647555
+status	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	s	language:JSON	object:outputs.4614504638168534921
+stderr	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	s	language:JSON	object:outputs.15729799797837862367
+stderr	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	s	language:JSON	object:outputs.15879463308771647555
+stderr	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	s	language:JSON	object:outputs.4614504638168534921
+stdout	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	s	language:JSON	object:outputs.15729799797837862367
+stdout	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	s	language:JSON	object:outputs.15879463308771647555
+stdout	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	s	language:JSON	object:outputs.4614504638168534921
+stext	os/src/linker.ld	/^    stext = .;$/;"	s	language:LdScript
+stext	os/src/main.rs	/^        fn stext(); \/\/ begin addr of text segment$/;"	f	language:Rust	function:rust_main	signature:()
+success	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	b	language:JSON	object:outputs.15729799797837862367
+success	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	b	language:JSON	object:outputs.15879463308771647555
+success	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	b	language:JSON	object:outputs.4614504638168534921
+successes	os/target/.rustc_info.json	/^{"rustc_fingerprint":6345776598623452673,"outputs":{"15729799797837862367":{"success":true,"stat/;"	o	language:JSON
+target	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/log-4c2b8425b1910d60/lib-log.json	/^{"rustc":3566059314332556659,"features":"[]","target":4487324886529943577,"profile":199095097763/;"	n	language:JSON
+target	os/target/riscv64gc-unknown-none-elf/release/.fingerprint/os-6be75d1c4660ae94/bin-os.json	/^{"rustc":3566059314332556659,"features":"[]","target":11826185938240015986,"profile":19909509776/;"	n	language:JSON
+write_str	os/src/console.rs	/^    fn write_str(&mut self, s: &str) -> fmt::Result {$/;"	P	language:Rust	implementation:Stdout	signature:(&mut self, s: &str) -> fmt::Result
