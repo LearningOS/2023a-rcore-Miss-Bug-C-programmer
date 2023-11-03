@@ -21,7 +21,9 @@ use alloc::vec::Vec;
 use lazy_static::*;
 use switch::__switch;
 pub use task::{TaskControlBlock, TaskStatus};
-
+use crate::syscall::{TASK_INFO, TaskInfo};
+use crate::timer::get_time_ms;
+use crate::mm::{VirtAddr, MapPermission};
 pub use context::TaskContext;
 
 /// The task manager, where all the tasks are managed.
@@ -80,6 +82,10 @@ impl TaskManager {
         let next_task = &mut inner.tasks[0];
         next_task.task_status = TaskStatus::Running;
         let next_task_cx_ptr = &next_task.task_cx as *const TaskContext;
+        inner.tasks[0].first_time = get_time_ms();
+        unsafe {
+            TASK_INFO = Some(&mut inner.tasks[0].task_info as *mut TaskInfo);
+        }
         drop(inner);
         let mut _unused = TaskContext::zero_init();
         // before this, we should drop local variables that must be dropped manually
@@ -143,6 +149,16 @@ impl TaskManager {
             inner.current_task = next;
             let current_task_cx_ptr = &mut inner.tasks[current].task_cx as *mut TaskContext;
             let next_task_cx_ptr = &inner.tasks[next].task_cx as *const TaskContext;
+            unsafe {
+                if let Some(x) = TASK_INFO{
+                    inner.tasks[current].task_info = (*x).clone();
+                };
+                TASK_INFO = Some(&mut inner.tasks[next].task_info as *mut TaskInfo);
+            }
+            if inner.tasks[next].first_time == 0{
+                inner.tasks[next].first_time = get_time_ms();
+            }
+            inner.tasks[next].task_info.time = get_time_ms()-inner.tasks[next].first_time;
             drop(inner);
             // before this, we should drop local variables that must be dropped manually
             unsafe {
@@ -152,6 +168,23 @@ impl TaskManager {
         } else {
             panic!("All applications completed!");
         }
+    }
+    /// map new pages
+    pub fn push(&self, start_va:VirtAddr, end_va:VirtAddr, permission: MapPermission) -> isize{
+        let mut inner = self.inner.exclusive_access();
+        let current = inner.current_task;
+        let ret: isize = inner.tasks[current].memory_set.mmap(start_va, end_va, permission);
+        drop(inner);
+        ret
+    }
+    ///
+    pub fn pop(&self, start_va:VirtAddr, end_va:VirtAddr) -> isize{
+        let mut inner = self.inner.exclusive_access();
+        let current = inner.current_task;
+        let ret = inner.tasks[current].memory_set.munmap(start_va, end_va);
+        drop(inner);
+        ret
+
     }
 }
 
@@ -201,4 +234,14 @@ pub fn current_trap_cx() -> &'static mut TrapContext {
 /// Change the current 'Running' task's program break
 pub fn change_program_brk(size: i32) -> Option<usize> {
     TASK_MANAGER.change_current_program_brk(size)
+}
+
+/// map new page
+pub fn push(start_va:VirtAddr, end_va:VirtAddr, permission: MapPermission) -> isize{
+    return TASK_MANAGER.push(start_va, end_va, permission);
+}
+
+/// unmap
+pub fn pop(start_va:VirtAddr, end_va:VirtAddr) -> isize{
+    return TASK_MANAGER.pop(start_va, end_va);
 }
